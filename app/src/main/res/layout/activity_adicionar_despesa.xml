@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#10ac84"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdicionarDespesa">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/calculadora"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/despesa"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Despesa"
+                android:textColor="#fff"
+                android:textColorHint="#fff"/>
+            <EditText
+                android:id="@+id/valor"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Valor"
+                android:textColor="#fff"
+                android:textColorHint="#fff"/>
+            <Spinner
+                android:id="@+id/tipo"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="#fff"
+                android:layout_marginTop="10dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/dataInicial"
+                    android:backgroundTint="@android:color/transparent"
+                    android:fontFamily="serif"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Data Inicial"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"/>
+                <CheckBox
+                    android:id="@+id/recorrente"
+                    android:buttonTint="#fff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/dataInicial"
+                    android:layout_marginTop="10dp"
+                    android:text="Recorrente"
+                    android:textColor="#fff"
+                    android:layout_marginLeft="20dp"
+                    android:checked="true"/>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/dataFinal"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:hint="Data Final"
+                android:visibility="gone"
+                android:textColor="#fff"
+                android:textColorHint="#fff"/>
+           <TextView
+               android:id="@+id/vincularPessoas"
+               android:background="#FFF"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="+ Vincular Pessoas"
+               android:gravity="center"
+               android:layout_marginTop="20dp"
+               android:textColor="#000"
+               android:textStyle="bold"
+               android:fontFamily="serif"
+               android:textSize="20dp"/>
+            <LinearLayout
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:id="@+id/llPessoas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+            <Button
+                android:id="@+id/cadastrarDespesa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:text="Cadastrar Despesa"
+                android:textColor="#fff"
+                android:layout_marginBottom="20dp"/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
